@@ -90,3 +90,20 @@ void program7(){
     cout << areaFT << " square feet." << endl;
     cout << areaMeters << " square meters." << endl;
 }
+
+void program8(){
+    int numPeople, numSlices, numPizzas;
+    cout << "How many people?" << endl;
+    cin >> numPeople;
+    cout << "How many slices of pizza per pizza?" << endl;
+    cin >> numSlices;
+    cout << "How many pizzas?" << endl;
+    cin >> numPizzas;
+    int totalSlices = (numSlices * numPizzas);
+    int slicesPerPerson = (int)(totalSlices / (double)numPeople);
+    cout << "Each person gets " << slicesPerPerson <<
+       " slices of pizza." << endl;
+    cout << "There are " << (totalSlices - (slicesPerPerson * numPeople))
+                 << " leftover pieces." << endl;
+
+}
