@@ -2,6 +2,9 @@
 #include <ctime>
 #include <chrono>
 #include <cmath>
+#include <iomanip>
+#include <locale>
+#include <sstream>
 
 using namespace std;
 
@@ -121,4 +124,33 @@ void program9(){
     else
         cout << "You will need to purchase " << gallons << " gallons of paint"
              << " to cover " << area << " square feet." << endl;
+}
+
+void program10(){
+    int qty1, qty2, qty3;
+    double price1, price2, price3, subtotal = 0.0, tax = 0.0, total = 0.0;
+    cout << "Enter the price of item 1" << endl;
+    cin >> price1;
+    cout << "Enter the quantity of item 1" << endl;
+    cin >> qty1;
+    cout << "Enter the price of item 2" << endl;
+    cin >> price2;
+    cout << "Enter the quantity of item 2" << endl;
+    cin >> qty2;
+    cout << "Enter the price of item 3" << endl;
+    cin >> price3;
+    cout << "Enter the quantity of item 3" << endl;
+    cin >> qty3;
+    subtotal = (price1 * qty1) + (price2 * qty2) + (price3 * qty3);
+    stringstream ss, st;
+
+    cout << fixed << setprecision(2);
+
+    cout << "Subtotal $" << subtotal << endl;
+    tax = subtotal * .055;
+    total = tax + subtotal;
+    st << total;
+    st.precision(2);
+    st << fixed;
+    cout << "Total $" << st.str() << endl;
 }
