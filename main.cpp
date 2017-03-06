@@ -3,6 +3,7 @@
 
 using namespace std;
 int main() {
+    while(true){
     cout << "Which program do you wish to run?" << endl;
     int program;
     cin >> program;
@@ -17,7 +18,11 @@ int main() {
         case 3:
             program3();
             break;
+        case 4:
+            program4();
+            break;
         default:
             cout << "Invalid choice.";
+    }
     }
 }
