@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <chrono>
+#include <cmath>
 
 using namespace std;
 
@@ -106,4 +107,18 @@ void program8(){
     cout << "There are " << (totalSlices - (slicesPerPerson * numPeople))
                  << " leftover pieces." << endl;
 
+}
+
+void program9(){
+    int length, width;
+    cout << "Enter the length and width of a room in feet:" << endl;
+    cin >> length >> width;
+    int area = length * width;
+    int gallons = ceil(area / (double)350);
+    if(gallons == 1)
+        cout << "You will need to purchase " << gallons << " gallon of paint"
+            << " to cover " << area << " square feet." << endl;
+    else
+        cout << "You will need to purchase " << gallons << " gallons of paint"
+             << " to cover " << area << " square feet." << endl;
 }

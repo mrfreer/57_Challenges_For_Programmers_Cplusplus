@@ -33,6 +33,9 @@ int main() {
         case 8:
             program8();
             break;
+        case 9:
+            program9();
+            break;
         case 0:
             return 0;
         default:
