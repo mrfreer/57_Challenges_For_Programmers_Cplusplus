@@ -73,3 +73,20 @@ void program6(){
     cout << "It's " << year << " so you can retire in " << (year +
             (retireAge- curAge)) << "." << endl;
 }
+
+void program7(){
+    int lenFt, widFt, areaFT;
+    double areaMeters;
+    cout << "What is the length of the room in feet?" << endl;
+    cin >> lenFt;
+    cout << "What is the width of the room in feet?" << endl;
+    cin >> widFt;
+    cout << "You entered dimensions of " <<
+                                         lenFt << " feet by " <<
+                                         widFt << " feet.\n";
+    areaFT = lenFt * widFt;
+    areaMeters = areaFT * 0.092903;
+    cout << "The area is " << endl;
+    cout << areaFT << " square feet." << endl;
+    cout << areaMeters << " square meters." << endl;
+}
