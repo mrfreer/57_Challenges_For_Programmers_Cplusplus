@@ -24,6 +24,9 @@ int main() {
         case 5:
             program5();
             break;
+        case 6:
+            program6();
+            break;
         case 0:
             return 0;
         default:

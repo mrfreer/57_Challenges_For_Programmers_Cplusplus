@@ -1,5 +1,10 @@
 #include <iostream>
+#include <ctime>
+#include <chrono>
+
 using namespace std;
+
+typedef chrono::system_clock Clock;
 
 void program1(){
     cout << "What is your name?" << endl;
@@ -53,4 +58,18 @@ void program5(){
     cout << num1 << " - " << num2 << " = " << subtract << endl;
     cout << num1 << " * " << num2 << " = " << multiply << endl;
     cout << num1 << " / " << num2 << " = " << divide << endl;
+}
+
+void program6(){
+    int curAge, retireAge;
+    cout << "What is your current age?" << endl;
+    cin >> curAge;
+    cout << "At what age would you like to retire?" << endl;
+    cin >> retireAge;
+    auto now = Clock::now();
+    time_t now_c = Clock::to_time_t(now);
+    struct tm * parts = localtime(&now_c);
+    int year = 1900 + parts->tm_year;
+    cout << "It's " << year << " so you can retire in " << (year +
+            (retireAge- curAge)) << "." << endl;
 }
