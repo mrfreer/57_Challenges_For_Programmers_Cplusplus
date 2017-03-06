@@ -38,3 +38,19 @@ void program4(){
     cout << "Do you " << verb << " your " << adjective <<
                 " "  << noun << " " << adverb << "?  That's hilarious!" << endl;
 }
+
+void program5(){
+    int num1, num2;
+    cout << "What is the first number?" << endl;
+    cin >> num1;
+    cout << "What is the second number?" << endl;
+    cin >> num2;
+    int add = num1 + num2;
+    int subtract = num1 - num2;
+    int multiply = num1 * num2;
+    int divide = num1 / num2;
+    cout << num1 << " + " << num2 << " = " << add << endl;
+    cout << num1 << " - " << num2 << " = " << subtract << endl;
+    cout << num1 << " * " << num2 << " = " << multiply << endl;
+    cout << num1 << " / " << num2 << " = " << divide << endl;
+}

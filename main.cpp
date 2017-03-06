@@ -4,7 +4,7 @@
 using namespace std;
 int main() {
     while(true){
-    cout << "Which program do you wish to run?" << endl;
+    cout << "Which program do you wish to run? 0 to quit." << endl;
     int program;
     cin >> program;
     switch (program)
@@ -21,6 +21,11 @@ int main() {
         case 4:
             program4();
             break;
+        case 5:
+            program5();
+            break;
+        case 0:
+            return 0;
         default:
             cout << "Invalid choice.";
     }
