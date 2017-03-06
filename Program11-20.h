@@ -2,6 +2,7 @@
 // Created by David on 3/5/2017.
 //
 #include <iomanip>
+#include <cmath>
 
 #ifndef INC_57_CHALLENGES_FOR_PROGRAMMERS_C_PROGRAM11_20_H
 #define INC_57_CHALLENGES_FOR_PROGRAMMERS_C_PROGRAM11_20_H
@@ -33,4 +34,22 @@ void program12(){
     cout << "After " << numYears << " years at " << i_rate << " %," <<
         " the investment will be worth $";
     cout << fixed << setprecision(2) << accrued << endl;
+}
+
+void program13(){
+    //A=P(1 + r/n)^(nt)
+    double principal, i_rate, numYears, accrued, numTimesCompounded;
+    cout << "Enter the principal:";
+    cin >> principal;
+    cout << "Enter the rate of interest:";
+    cin >> i_rate;
+    cout << "Enter the number of years:";
+    cin >> numYears;
+    cout << "Enter the number of times the interest is compounded per year:" << endl;
+    cin >> numTimesCompounded;
+    accrued = principal * pow((1 + (i_rate/100.0)/numTimesCompounded), (numTimesCompounded * numYears));
+    cout << "$" << fixed << setprecision(2) << principal << " invested at " <<
+    i_rate << "% for " << numYears << " compounded " << numTimesCompounded << " times " <<
+    " per year is $" << accrued << endl;
+
 }
