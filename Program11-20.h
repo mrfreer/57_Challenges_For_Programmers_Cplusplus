@@ -53,3 +53,21 @@ void program13(){
     " per year is $" << accrued << endl;
 
 }
+
+void program14(){
+    //WI is charged 5.5%
+    string state;
+    double orderAmt, tax = 0, total = 0;
+    cout << "What is the order amount?" << endl;
+    cin >> orderAmt;
+    cout << "What is the state?" << endl;
+    cin >> state;
+    if(state == "WI") {
+        cout << "The subtotal is $" << fixed << setprecision(2) << orderAmt << "." << endl;
+        tax = orderAmt * .055;
+        cout << "The tax is " << fixed << setprecision(2) << "$" << tax << endl;
+        cout << "The total is " << fixed << setprecision(2) << "$" << (tax + orderAmt) << "." << endl;
+    } else{
+        cout << "The total is $" << fixed << setprecision(2) << orderAmt << "." << endl;
+    }
+}
